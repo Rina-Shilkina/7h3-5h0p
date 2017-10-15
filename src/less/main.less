@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import 'media';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+@color-text: #c00;
+@text-font-Roboto: 'Roboto', sans-serif;
 
 // Код для примера
 /*body {
@@ -40,7 +44,78 @@
 }
 */
 
+
+html {
+    font-size: 100%
+}
+
+body {
+    margin: 0;
+}
+
 .page {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
     background-color: bisque;
 }
 
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 0 15px 0;
+    background-color: white;
+
+    &__name {
+        font-family: @text-font-Roboto;
+        font-weight: bold;
+        font-size: 1.4em;
+        color: @color-text;
+        padding-left: 1.6%;
+        letter-spacing: 1px;
+        word-spacing: 5px;
+    }
+
+    &__logo {
+        width: 49px;
+        //background-color: black;
+        padding-left: 7.5%;
+        fill: @color-text;
+    }
+
+    &__phone {
+        font-family: @text-font-Roboto;
+        font-weight: bold;
+        font-size: 1.4em;
+        color: @color-text;
+        letter-spacing: 1px;
+    }
+}
+
+
+/*
+.header__name {
+    font-family: @text-font-Roboto;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: @color-text;
+    padding-left: 1.6%;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+.name {
+    width: 104px;
+    padding-top: 1.8%;
+    padding-left: 20%;
+}
+
+.logo {
+    width: 49px;
+    background-color: black;
+    color: @color-text;
+    padding-left: 1.1%;
+}
+}*/
