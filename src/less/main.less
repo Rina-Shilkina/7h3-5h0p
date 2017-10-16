@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 @color-text: #c00;
+@color-background: #f2f2ed;
+@color-text: #c00;
+@color-border: rgb(217, 217, 212);
 @text-font-Roboto: 'Roboto', sans-serif;
 
 // Код для примера
@@ -50,19 +53,18 @@ html {
 }
 
 body {
-    margin: 0;
+   margin: 0;
 }
 
 .page {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 90%;
+    align-items: center;
     background-color: bisque;
 }
 
 .header {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,7 +83,6 @@ body {
 
     &__logo {
         width: 49px;
-        //background-color: black;
         padding-left: 7.5%;
         fill: @color-text;
     }
@@ -95,27 +96,44 @@ body {
     }
 }
 
+.navigation {
+    width: 100%;
+    background-color: @color-background !important;
+    border-top: 1px solid @color-border;
+    border-bottom: 1px solid @color-border;
 
-/*
-.header__name {
-    font-family: @text-font-Roboto;
-    font-weight: bold;
-    font-size: 1.4em;
-    color: @color-text;
-    padding-left: 1.6%;
-    letter-spacing: 1px;
-    word-spacing: 5px;
-}
-.name {
-    width: 104px;
-    padding-top: 1.8%;
-    padding-left: 20%;
+    &__content {
+        height: 50px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        padding: 2px 0 0 25px;
+    }
+
+    &__item {
+        list-style-type: none;
+        padding-right: 20px;
+    }
+
+    &__link {
+        font-family: @text-font-Roboto;
+        font-size: 1em;
+        color: @color-text;
+    }
+
+    &__search {
+        height: 35px;
+        width: 276px;
+        margin-right: 3px;
+        background: white url(../img/search.png) no-repeat 97%;
+        border: 1px solid @color-border;
+    }
+
 }
 
-.logo {
-    width: 49px;
-    background-color: black;
-    color: @color-text;
-    padding-left: 1.1%;
-}
-}*/
