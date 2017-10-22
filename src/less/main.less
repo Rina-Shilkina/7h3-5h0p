@@ -10,6 +10,8 @@
 @color-tshirt-white: #fff;
 @color-tshirt-yellow: #e3d95e;
 @color-tshirt-green: #a5af96;
+@color-button-text: #fff;
+@color-button-like-text: #999;
 
 // Код для примера
 /*body {
@@ -166,6 +168,7 @@ body {
 .product {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 123px;
 
     &__pic {
         width: 49%;
@@ -287,7 +290,30 @@ body {
     }
 }
 
+.button__buy {
+    margin: 43px 0 0;
+    padding: 23px 54px;
+    background-color: @color-text;
+    font-size: 1.89em;
+    color: @color-button-text;
+    border: none;
+    outline: none; /* убирать контур в Mozilla */
+}
 
-.wish-list__heart {
-    width: 50px;
+
+.wish-list {
+    display: flex;
+    margin: 40px 0 0 3px;
+
+    &__heart {
+        width: 26px;
+
+    }
+    &__item {
+        padding: 2px 0 0 7px;
+    }
+
+    &__link {
+        color: @color-button-like-text;
+    }
 }
