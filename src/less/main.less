@@ -66,7 +66,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: bisque;
 }
 
 .header {
@@ -104,7 +103,7 @@ body {
 
 .navigation {
     width: 100%;
-    background-color: @color-background !important;
+    background-color: @color-background;
     border-top: 1px solid @color-border;
     border-bottom: 1px solid @color-border;
 
@@ -307,8 +306,8 @@ body {
 
     &__heart {
         width: 26px;
-
     }
+
     &__item {
         padding: 2px 0 0 7px;
     }
@@ -316,4 +315,39 @@ body {
     &__link {
         color: @color-button-like-text;
     }
+}
+
+.footer {
+    width: 100%;
+    background-color: @color-background;
+    border-top: 1px solid @color-border;
+    border-bottom: 1px solid @color-border;
+
+    &__content {
+        display:flex;
+    }
+}
+
+.delivery {
+    width: 25px;
+}
+
+.heart {
+    width: 25px;
+}
+
+.cup {
+    width: 25px;
+}
+
+.facebook {
+    width: 25px;
+}
+
+.twitter {
+    width: 25px;
+}
+
+.instagram {
+    width: 25px;
 }
