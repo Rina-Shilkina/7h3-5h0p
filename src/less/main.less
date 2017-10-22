@@ -7,6 +7,9 @@
 @color-background: #f2f2ed;
 @color-border: rgb(217, 217, 212);
 @text-font-Roboto: 'Roboto', sans-serif;
+@color-tshirt-white: #fff;
+@color-tshirt-yellow: #e3d95e;
+@color-tshirt-green: #a5af96;
 
 // Код для примера
 /*body {
@@ -222,20 +225,67 @@ body {
 
     &__item_s {
         padding: 9.5px 20.5px;
-        margin-right: 11px;
+        margin-right: 9px;
     }
 
     &__item_m {
         padding: 9.5px 14.5px;
-        margin-right: 11px;
+        margin-right: 9px;
     }
 
     &__item_l {
         padding: 9.5px 21.5px;
-        margin-right: 11px;
+    }
+
+    &__item_active {
+        border: 3px solid @color-text !important;
+        line-height: 40px !important;
     }
 }
 
+.color {
+    &__text {
+        margin-top: 35px;
+    }
+
+    &__icon {
+        margin: 13px 0 0 2px;
+    }
+
+    &__list{
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        list-style-type: none;
+        text-decoration: none;
+        border: 1px solid black;
+
+        &_active {
+            border: 3px solid @color-text !important;
+            padding: 29.5px !important;
+        }
+    }
+
+    &__white {
+        background-color: @color-tshirt-white;
+        padding: 31.5px;
+        margin-right: 10px;
+    }
+
+    &__yellow {
+        background-color: @color-tshirt-yellow;
+        padding: 31.5px;
+        margin-right: 10px;
+    }
+
+    &__green {
+        background-color: @color-tshirt-green;
+        padding: 31.5px;
+    }
+}
 
 
 .wish-list__heart {
