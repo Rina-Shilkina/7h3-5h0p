@@ -53,7 +53,8 @@ html {
 }
 
 body {
-   margin: 0;
+    margin: 0;
+    font-family: @text-font-Roboto;
 }
 
 .page {
@@ -68,11 +69,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 19px 0 15px 0;
+    padding: 19px 0 15px;
     background-color: white;
 
     &__name {
-        font-family: @text-font-Roboto;
         font-weight: bold;
         font-size: 1.4em;
         color: @color-text;
@@ -88,11 +88,12 @@ body {
     }
 
     &__phone {
-        font-family: @text-font-Roboto;
         font-weight: bold;
         font-size: 1.4em;
         color: @color-text;
-        letter-spacing: 1px;
+        letter-spacing: 0.8px;
+        margin-right: 2px;
+
     }
 }
 
@@ -122,7 +123,6 @@ body {
     }
 
     &__link {
-        font-family: @text-font-Roboto;
         font-size: 1em;
         color: @color-text;
     }
@@ -139,19 +139,10 @@ body {
 .content {
     width: 90%;
     background-color: white !important;
-
-    &____breadcrumbs {
-        display: flex;
-    }
-
-    &__product{
-        display: flex;
-        justify-content: space-between;
-    }
 }
 
 .breadcrumbs {
-
+    display: flex;
 
     &__list {
         display: flex;
@@ -160,34 +151,27 @@ body {
 
     &__item {
         list-style-type: none;
-        padding-right: 5px;
+        padding-right: 4px;
     }
 
     &__link {
-        font-family: @text-font-Roboto;
         font-size: 1em;
         color: @color-text;
     }
 }
 
 .product {
-    &__image {
-        width: 50.5%;
-        height: 100%;
-    }
+    display: flex;
+    justify-content: space-between;
 
-    &__tshirt {
-        width: 100%;
+    &__pic {
+        width: 49%;
+        height: 100%;
         padding: 2px 0 0 22px;
-        box-sizing: border-box;
     }
 
     &__info {
         width: 45%;
-    }
-
-    &__text {
-        font-family: @text-font-Roboto;
     }
 
     &__title {
@@ -200,10 +184,11 @@ body {
 
     &__description {
         margin: 14px 0 0 2px;
+        word-spacing: 1px;
     }
 
     &__price {
-        margin: 21px 0 0 -5px;
+        margin: 21px 0 0 -4px;
         color: @color-text;
         font-size: 2.4em;
         font-weight: bold;
@@ -211,7 +196,6 @@ body {
     }
 
     &__size {
-        font-family: @text-font-Roboto;
         margin-top: 22px;
     }
 }
@@ -219,24 +203,36 @@ body {
 .size {
 
     &__icon {
-        padding: 36px 0 0 2px;
+        margin: 13px 0 0 2px;
     }
 
     &__list{
         display: flex;
         padding: 0;
+        margin: 0;
     }
 
     &__item {
         list-style-type: none;
-    }
-
-    &__link {
+        font-size: 2.3em;
         text-decoration: none;
         color: @color-text-list;
         border: 1px solid black;
-        padding: 22px 27px;
-        margin-right: 8px;
+    }
+
+    &__item_s {
+        padding: 9.5px 20.5px;
+        margin-right: 11px;
+    }
+
+    &__item_m {
+        padding: 9.5px 14.5px;
+        margin-right: 11px;
+    }
+
+    &__item_l {
+        padding: 9.5px 21.5px;
+        margin-right: 11px;
     }
 }
 
