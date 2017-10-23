@@ -327,18 +327,6 @@ body {
     }
 }
 
-.delivery {
-    width: 25px;
-}
-
-.heart {
-    width: 25px;
-}
-
-.cup {
-    width: 25px;
-}
-
 .facebook {
     width: 25px;
 }
@@ -351,16 +339,25 @@ body {
     width: 25px;
 }
 
+.h-service {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
 .service {
     display: flex;
 
     &:first-child {
         width: 52%;
+        padding-top: 57px;
     }
 
     &:last-child {
-        width: 37%;
-        margin-top: 9px;
+        width: 38%;
+        margin-top: 7px;
+        padding-top: 57px;
     }
 
     &__info {
@@ -409,17 +406,9 @@ body {
     }
 }
 
-.h-service {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 57px;
-}
-
-
 .bonus {
     font-size: 0.95em;
+    margin-left: 17px;
 
     &__list {
         padding: 0;
@@ -429,6 +418,29 @@ body {
     &__item {
         list-style-type: none;
         text-decoration: none;
+        display: flex;
+        align-items: flex-start;;
+        letter-spacing: -0.6px;
+    }
+
+    &__delivery {
+        width: 47px;
+        margin-right: 12px;
+        margin-bottom: 24px;
+    }
+
+    &__heart {
+        width: 26px;
+        margin-left: 19px;
+        margin-right: 12px;
+        margin-bottom: 24px;
+    }
+
+    &__cup {
+        width: 21px;
+        margin-right: 13px;
+        margin-left: 25px;
+        margin-bottom: 24px;
     }
 }
 
