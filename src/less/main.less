@@ -319,7 +319,6 @@ body {
     width: 100%;
     background-color: @color-background;
     border-top: 1px solid @color-border;
-    border-bottom: 1px solid @color-border;
 
     &__servis {
         display: flex;
@@ -459,9 +458,30 @@ body {
     }
 }
 
-.copyright {
+
+.line {
+    border: 0;
     border-top: 1px solid @color-border;
-    width: 88%;
-    margin: 0 auto;
+    transform: rotate(90);
+    width: 1400px;
+    margin: 0 0 0 101px;
+}
+
+.copyright {
+    width: 90%;
+    margin: 30px auto 110px;
+
+    &__text {
+        margin: 0;
+        font-size: .9em;
+        margin-left: 21px;
+        letter-spacing: -.2px;
+    }
+
+    :first-child {
+        margin-bottom: 6px;
+    }
+
+
 }
 
