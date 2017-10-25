@@ -105,7 +105,6 @@ body {
     width: 100%;
     background-color: @color-background;
     border-top: 1px solid @color-border;
-    border-bottom: 1px solid @color-border;
 
     &__content {
         height: 50px;
@@ -323,27 +322,16 @@ body {
     border-bottom: 1px solid @color-border;
 
     &__servis {
-        display:flex;
+        display: flex;
     }
-}
-
-.facebook {
-    width: 25px;
-}
-
-.twitter {
-    width: 25px;
-}
-
-.instagram {
-    width: 25px;
 }
 
 .h-service {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    padding-bottom: 45px;
     margin: 0 auto;
+    width: 90%;
 }
 
 .service {
@@ -357,7 +345,6 @@ body {
     &:last-child {
         width: 38%;
         margin-top: 7px;
-        padding-top: 57px;
     }
 
     &__info {
@@ -395,9 +382,9 @@ body {
 
     &__link {
         display: flex;
-        color: @color-button-like-text;
+        color: @color-text-list;
         text-decoration: none;
-        font-size: 0.95em;
+        font-size: .95em;
         word-spacing: -2px;
     }
 
@@ -407,8 +394,9 @@ body {
 }
 
 .bonus {
-    font-size: 0.95em;
+    font-size: .95em;
     margin-left: 17px;
+    padding-top: 60px;
 
     &__list {
         padding: 0;
@@ -419,32 +407,30 @@ body {
         list-style-type: none;
         text-decoration: none;
         display: flex;
-        align-items: flex-start;;
-        letter-spacing: -0.6px;
+        align-items: flex-start;
+        letter-spacing: -.6px;
     }
 
     &__delivery {
-        width: 47px;
-        margin-right: 12px;
-        margin-bottom: 24px;
+        width: 45px;
+        margin: -3px 14px 27px 0;
     }
 
     &__heart {
         width: 26px;
-        margin-left: 19px;
-        margin-right: 12px;
-        margin-bottom: 24px;
+        margin: -2px 12px 24px 19px;
     }
 
     &__cup {
         width: 21px;
-        margin-right: 13px;
-        margin-left: 25px;
-        margin-bottom: 24px;
+        margin: 0 13px 26px 25px;
     }
 }
 
 .references {
+    margin-left: 29%;
+    margin-top: 57px;
+
     &__list {
         padding: 0;
         margin: 0;
@@ -454,4 +440,28 @@ body {
         list-style-type: none;
         text-decoration: none;
     }
+
+
+    &__facebook {
+        width: 15px;
+        margin: 0 0 19px 11px;
+    }
+
+    &__twitter {
+        width: 33px;
+        margin-left: 1px;
+        margin-bottom: 19px;
+    }
+
+    &__instagram {
+        width: 31px;
+        margin-left: 3px;
+    }
 }
+
+.copyright {
+    border-top: 1px solid @color-border;
+    width: 88%;
+    margin: 0 auto;
+}
+
