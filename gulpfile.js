@@ -51,3 +51,8 @@ gulp.task('watch', () => {
 
 gulp.task('default', ['styles', 'html', 'img', 'js', 'livereload', 'watch']);
 gulp.task('prod', ['styles', 'html', 'img', 'js']);
+
+
+/*gulp.task('default', function(){
+    console.log('Hello, Gulp, AAAAAAAAAA');
+});*/
