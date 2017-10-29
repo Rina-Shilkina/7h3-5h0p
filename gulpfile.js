@@ -5,6 +5,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename       = require('gulp-rename');
 const ejs          = require('gulp-ejs');
 const gutil        = require('gulp-util');
+const sourcemaps   = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
 
 // Автоперезагрузка при изменении файлов в папке `dist`:
 // Принцип: меняем файлы в `/src`, они обрабатываются и переносятся в `dist` и срабатывает автоперезагрузка.
@@ -24,13 +26,20 @@ gulp.task('livereload', () => {
 
 gulp.task('styles', () => {
     gulp.src('src/less/main.less')
+        .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoprefixer())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('img', () => {
     gulp.src('src/img/**/*.*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            interlaced: true
+        }))
         .pipe(gulp.dest('./dist/img'));
 });
 
@@ -45,6 +54,7 @@ gulp.task('html', () => {
         .pipe(rename('index.html'))
         .pipe(gulp.dest('./dist'));
 });
+
 
 // Отслеживание изменений в файлах, нужно только при локальной разработке
 gulp.task('watch', () => {
