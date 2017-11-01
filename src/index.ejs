@@ -25,19 +25,11 @@
                 <ul class="navigation__list">
                     <% const navigation = ['LISP', 'OCaml', 'JavaScript', 'Python', 'PHP']; %>
                     <% navigation.forEach(function(item, index) { %>
-                    <li class ="navigation__item">
+                    <li class="navigation__item">
                         <a href="#" class="navigation__link <% if(index == 0) { %>navigation__link_active<% } %>"><%= item; %></a>
                     </li>
                     <% }); %>
                 </ul>
-             <!--  for(let item of navigation) {-->
-             <!--   <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">LISP</a>
-                    <li class="navigation__item"><a href="#" class="navigation__link">OCaml</a>
-                    <li class="navigation__item"><a href="#" class="navigation__link">JavaScript</a>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Python</a>
-                    <li class="navigation__item"><a href="#" class="navigation__link">PHP</a>
-                </ul>-->
             </div>
             <input class="navigation__search" name="search" placeholder="">
         </div>
@@ -46,11 +38,16 @@
     <div class="content">
         <div class="breadcrumbs">
             <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">LISP</a>
-                <li class="breadcrumbs__item"> /
-                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Одежда</a>
-                <li class="breadcrumbs__item"> /
-                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Футболки</a>
+                <% const breadcrumbs = ['LISP', '/', 'Одежда', '/', 'Футболки']; %>
+                <% breadcrumbs.forEach(function(item, index) { %>
+                <li class="breadcrumbs__item">
+                    <% if (index % 2 == 0) { %>
+                    <a href="#" class="breadcrumbs__link <% if(index == 4) { %>breadcrumbs__link_active<% } %>"><%= item; %></a>
+                    <% } else {%>
+                    <span class="breadcrumbs__link_separator">/</span>
+                    <% } %>
+                </li>
+                <% }); %>
             </ul>
         </div>
         <div class="product">
