@@ -102,32 +102,44 @@
                         <h4 class="service__text">Сервис и поддержка</h4>
                         <div class="service__link">
                             <ul class="service__list">
-                                <li class="service__item"><a href="#" class="service__link">Как сделать заказ</a>
-                                <li class="service__item"><a href="#" class="service__link">Возврат товара</a>
-                                <li class="service__item"><a href="#" class="service__link">Публичная оферта</a>
-                                <li class="service__item"><a href="#" class="service__link">Доставка</a>
+                                <% const service1 = ['Как сделать заказ', 'Возврат товара', 'Публичная оферта', 'Доставка']; %>
+                                <% service1.forEach(function(item, index) { %>
+                                <li class="service__item">
+                                    <a href="#" class="service__link"><%= item; %></a>
+                                </li>
+                                <% }); %>
                             </ul>
                             <ul class="service__list">
-                                <li class="service__item"><a href="#" class="service__link">Способы оплаты</a>
-                                <li class="service__item"><a href="#" class="service__link">Правила продажи</a>
-                                <li class="service__item"><a href="#" class="service__link">Возврат денежных средств</a>
-                                <li class="service__item"><a href="#" class="service__link">Вопросы и ответы</a>
+                                <% const service2 = ['Способы оплаты', 'Правила продажи', 'Возврат денежных средств', 'Вопросы и ответы']; %>
+                                <% service2.forEach(function(item, index) { %>
+                                <li class="service__item">
+                                    <a href="#" class="service__link"><%= item; %></a>
+                                </li>
+                                <% }); %>
                             </ul>
                         </div>
                     </div>
                     <div class="service__info">
                         <h4 class="service__text">О компании</h4>
                         <div class="service__link">
+
                             <ul class="service__list">
-                                <li class="service__item"><a href="#" class="service__link">О нас</a>
-                                <li class="service__item"><a href="#" class="service__link">Контакты</a>
-                                <li class="service__item"><a href="#" class="service__link">Вакансии</a>
-                                <li class="service__item"><a href="#" class="service__link">Партнерам</a>
+                                <% const service3 = ['О нас', 'Контакты', 'Вакансии', 'Партнерам']; %>
+                                <% service3.forEach(function(item, index) { %>
+                                <li class="service__item">
+                                    <a href="#" class="service__link"><%= item; %></a>
+                                </li>
+                                <% }); %>
                             </ul>
+
                             <ul class="service__list service__list_last-col">
-                                <li class="service__item"><a href="#" class="service__link">Сертификаты</a>
-                                <li class="service__item"><a href="#" class="service__link">Преимущества</a>
-                                <li class="service__item"><a href="#" class="service__link">Наши скидки</a>
+
+                                <% const service4 = ['Сертификаты', 'Преимущества', 'Наши скидки']; %>
+                                <% service4.forEach(function(item, index) { %>
+                                <li class="service__item">
+                                    <a href="#" class="service__link"><%= item; %></a>
+                                </li>
+                                <% }); %>
                             </ul>
                         </div>
                     </div>
