@@ -122,7 +122,6 @@
                     <div class="service__info">
                         <h4 class="service__text">О компании</h4>
                         <div class="service__link">
-
                             <ul class="service__list">
                                 <% const service3 = ['О нас', 'Контакты', 'Вакансии', 'Партнерам']; %>
                                 <% service3.forEach(function(item, index) { %>
@@ -131,9 +130,7 @@
                                 </li>
                                 <% }); %>
                             </ul>
-
                             <ul class="service__list service__list_last-col">
-
                                 <% const service4 = ['Сертификаты', 'Преимущества', 'Наши скидки']; %>
                                 <% service4.forEach(function(item, index) { %>
                                 <li class="service__item">
@@ -147,9 +144,16 @@
                 <div class="service">
                     <div class="footer__bonus bonus">
                         <ul class="bonus__list">
-                            <li class="bonus__item"><img class="bonus__delivery" src="img/delivery.svg" alt="Доставка">бесплантая доставка от 4000р
-                            <li class="bonus__item"><img class="bonus__heart" src="img/heart.svg" alt="Лайк">пробники в подарок при каждой покупке
-                            <li class="bonus__item"><img class="bonus__cup" src="img/cup.svg" alt="Кубок">акции и подарки за покупку
+                            <% const bonus = [
+                                {img: 'delivery', alt: 'Доставка', text: 'бесплантая доставка от 4000р'},
+                                {img: 'heart', alt: 'Лайк', text: 'пробники в подарок при каждой покупке'},
+                                {img: 'cup', alt: 'Доставка',  text: 'акции и подарки за покупку'}
+                            ]%>
+                            <% bonus.forEach(function(item, index) { %>
+                            <li class="bonus__item">
+                                <img class="bonus__<%= item.img %>" src="img/<%= item.img %>.svg" alt="<%= item.alt %>"><%= item.text; %>
+                            </li>
+                            <% }); %>
                         </ul>
                     </div>
                     <div class="footer__references references">
