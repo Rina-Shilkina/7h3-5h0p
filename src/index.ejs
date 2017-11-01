@@ -50,6 +50,7 @@
                 <% }); %>
             </ul>
         </div>
+
         <div class="product">
             <img class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка">
             <div class="product__info">
@@ -72,12 +73,15 @@
                 </div>
                 <div class="product__color color">
                     <div class="color__text">Цвет:</div>
+
                     <div class="color__icon">
-                        <ul class="color__list">
-                            <li class="color__item color__white color__item_active">
-                            <li class="color__item color__yellow">
-                            <li class="color__item color__green">
-                        </ul>
+                        <% const color = ['white', 'yellow', 'green']; %>
+                        <% color.forEach(function(item, index) { %>
+
+                        <p class="color__item color__item_<%= item; %> <% if (index == 0) { %>color__item_active<% }%>">
+                            <input class="color__radio" name="color" type="radio" value="color__item_<%= item; %>" <% if (index == 0) { %>checked <% }%> >
+                        </p>
+                        <% }); %>
                     </div>
                 </div>
                 <div class="product__buy">

@@ -222,12 +222,6 @@ body {
         margin: 13px 0 0 2px;
     }
 
-    &__list{
-        display: flex;
-        padding: 0;
-        margin: 0;
-    }
-
     &__item {
         font-size: 2.35em;
         color: @color-text-list;
@@ -236,59 +230,57 @@ body {
         line-height: 59px;
         text-align: center;
         margin: 0 10px 0 0;
+
+        &_active {
+            border: 3px solid @color-text !important;
+            width: 59px;
+        }
     }
 
     &__radio {
         display: none;
     }
-
-    &__item_active {
-        border: 3px solid @color-text !important;
-        width: 59px;
-    }
 }
 
 .color {
     &__text {
-        margin-top: 35px;
+        margin-top: 36px;
     }
 
     &__icon {
         margin: 13px 0 0 2px;
-    }
-
-    &__list{
         display: flex;
-        padding: 0;
-        margin: 0;
     }
 
     &__item {
         list-style-type: none;
         text-decoration: none;
         border: 1px solid black;
+        width: 63px;
+        height: 63px;
+        margin: 0 10px 0 0;
+
+        &_white {
+            background-color: @color-tshirt-white;
+        }
+
+        &_yellow {
+            background-color: @color-tshirt-yellow;
+        }
+
+        &_green {
+            background-color: @color-tshirt-green;
+        }
 
         &_active {
             border: 3px solid @color-text !important;
-            padding: 29.5px !important;
+            width: 59px;
+            height: 59px !important;
         }
     }
 
-    &__white {
-        background-color: @color-tshirt-white;
-        padding: 31.5px;
-        margin-right: 10px;
-    }
-
-    &__yellow {
-        background-color: @color-tshirt-yellow;
-        padding: 31.5px;
-        margin-right: 10px;
-    }
-
-    &__green {
-        background-color: @color-tshirt-green;
-        padding: 31.5px;
+    &__radio {
+        display: none;
     }
 }
 
