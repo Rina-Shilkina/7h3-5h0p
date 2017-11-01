@@ -204,7 +204,7 @@ body {
     }
 
     &__price {
-        margin: 21px 0 0 -4px;
+        margin: 23px 0 0 -4px;
         color: @color-text;
         font-size: 2.4em;
         font-weight: bold;
@@ -212,12 +212,13 @@ body {
     }
 
     &__size {
-        margin-top: 22px;
+        margin-top: 25px;
     }
 }
 
 .size {
     &__icon {
+        display: flex;
         margin: 13px 0 0 2px;
     }
 
@@ -228,30 +229,22 @@ body {
     }
 
     &__item {
-        list-style-type: none;
-        font-size: 2.3em;
-        text-decoration: none;
+        font-size: 2.35em;
         color: @color-text-list;
         border: 1px solid black;
+        width: 63px;
+        line-height: 59px;
+        text-align: center;
+        margin: 0 10px 0 0;
     }
 
-    &__item_s {
-        padding: 9.5px 20.5px;
-        margin-right: 9px;
-    }
-
-    &__item_m {
-        padding: 9.5px 14.5px;
-        margin-right: 9px;
-    }
-
-    &__item_l {
-        padding: 9.5px 21.5px;
+    &__radio {
+        display: none;
     }
 
     &__item_active {
         border: 3px solid @color-text !important;
-        line-height: 40px !important;
+        width: 59px;
     }
 }
 
