@@ -158,17 +158,27 @@
                     </div>
                     <div class="footer__references references">
                         <ul class="references__list">
-                            <li class="references__item"><a href="#" class="references__link"><img class="references__facebook" src="img/facebook.svg" alt="facebook"></a>
-                            <li class="references__item"><a href="#" class="references__link"><img class="references__twitter" src="img/twitter.svg" alt="twitter"></a>
-                            <li class="references__item"><a href="#" class="references__link"><img class="references__instagram" src="img/instagram.svg" alt="instagram"></a>
+
+                            <% const references = [
+                                {img: 'facebook', alt: 'facebook'},
+                                {img: 'twitter', alt: 'twitter'},
+                                {img: 'instagram', alt: 'instagram'}
+                            ]%>
+                            <% references.forEach(function(item, index) { %>
+                            <li class="references__item">
+                                <a href="#" class="references__link"><img class="references__<%= item.img %>" src="img/<%= item.img %>.svg" alt="<%= item.alt %>"></a>
+                            </li>
+                            <% }); %>
                         </ul>
                     </div>
                 </div>
         </div>
         <hr class="line">
         <div class="copyright">
-            <p class="copyright__text">2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.</p>
-            <p class="copyright__text">Все права защищены. Доставка по всей России!</p>
+            <% const copyright = ['2005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.', 'Все права защищены. Доставка по всей России!']; %>
+            <% copyright.forEach(function(item, index) { %>
+            <p class="copyright__text"><%= item %></p>
+            <% }); %>
         </div>
     </div>
 </div>
