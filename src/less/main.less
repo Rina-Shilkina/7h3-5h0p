@@ -1,0 +1,482 @@
+@charset "UTF-8";
+@import 'media';
+@import (less) '../../node_modules/normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+@color-text: #c00;
+@color-text-list: black;
+@color-background: #f2f2ed;
+@color-border: rgb(217, 217, 212);
+@text-font-Roboto: 'Roboto', sans-serif;
+@color-tshirt-white: #fff;
+@color-tshirt-yellow: #e3d95e;
+@color-tshirt-green: #a5af96;
+@color-button-text: #fff;
+@color-button-like-text: #999;
+
+// Код для примера
+/*body {
+    background: #ccc;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: red; // red on small devices
+
+    @media @tablet {
+        background: green; // green on medium devices
+    }
+
+    @media @desktop {
+        background: blue; // blue on large devices
+    }
+
+    &__item {
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    &__link {
+        color: #FFF;
+    }
+
+    // Bottom Menu
+    &_bottom { // BEM modifier example
+        background: green;
+    }
+
+    &_bottom &__link {
+        color: #f00;
+    }
+}
+*/
+
+
+html {
+    font-size: 100%
+}
+
+body {
+    margin: 0;
+    font-family: @text-font-Roboto;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 0 15px;
+    background-color: white;
+
+    &__name {
+        font-weight: bold;
+        font-size: 1.4em;
+        color: @color-text;
+        padding-left: 1.6%;
+        letter-spacing: 1px;
+        word-spacing: 5px;
+    }
+
+    &__logo {
+        width: 49px;
+        padding-left: 7.5%;
+        fill: @color-text;
+    }
+
+    &__phone {
+        font-weight: bold;
+        font-size: 1.4em;
+        color: @color-text;
+        letter-spacing: 0.8px;
+        margin-right: 2px;
+    }
+}
+
+.navigation {
+    width: 100%;
+    background-color: @color-background;
+    border-top: 1px solid @color-border;
+    border-bottom: 1px solid @color-border;
+
+    &__content {
+        height: 49px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        padding: 5px 0 0 24px;
+    }
+
+    &__item {
+        list-style-type: none;
+        padding-right: 20px;
+    }
+
+    &__link {
+        font-size: 1em;
+        color: @color-text;
+
+        &_active {
+            color: @color-text-list;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+
+    &__search {
+        height: 34px;
+        width: 276px;
+        margin-right: 3px;
+        background: white url(../img/search.png) no-repeat 97%;
+        border: 1px solid @color-border;
+    }
+}
+
+.content {
+    width: 90%;
+    background-color: white !important;
+}
+
+.breadcrumbs {
+    display: flex;
+
+    &__list {
+        display: flex;
+        padding: 33px 0 0 21px;
+    }
+
+    &__item {
+        list-style-type: none;
+        padding-right: 4px;
+    }
+
+    &__link {
+        font-size: 1em;
+        color: @color-text;
+
+        &_active {
+            color: @color-text-list;
+            text-decoration: none;
+        }
+    }
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 123px;
+
+    &__pic {
+        width: 49%;
+        height: 100%;
+        padding: 2px 0 0 22px;
+    }
+
+    &__info {
+        width: 45%;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 2.2em;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        line-height: 36px;
+    }
+
+    &__description {
+        margin: 14px 0 0 2px;
+        word-spacing: 1px;
+    }
+
+    &__price {
+        margin: 23px 0 0 -4px;
+        color: @color-text;
+        font-size: 2.4em;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    &__size {
+        margin-top: 25px;
+    }
+}
+
+.size {
+    &__icon {
+        display: flex;
+        margin: 13px 0 0 2px;
+    }
+
+    &__item {
+        font-size: 2.35em;
+        color: @color-text-list;
+        border: 1px solid black;
+        width: 63px;
+        line-height: 59px;
+        text-align: center;
+        margin: 0 10px 0 0;
+
+        &_active {
+            border: 3px solid @color-text !important;
+            width: 59px;
+        }
+    }
+
+    &__radio {
+        display: none;
+    }
+}
+
+.color {
+    &__text {
+        margin-top: 36px;
+    }
+
+    &__icon {
+        margin: 13px 0 0 2px;
+        display: flex;
+    }
+
+    &__item {
+        list-style-type: none;
+        text-decoration: none;
+        border: 1px solid black;
+        width: 63px;
+        height: 63px;
+        margin: 0 10px 0 0;
+
+        &_white {
+            background-color: @color-tshirt-white;
+        }
+
+        &_yellow {
+            background-color: @color-tshirt-yellow;
+        }
+
+        &_green {
+            background-color: @color-tshirt-green;
+        }
+
+        &_active {
+            border: 3px solid @color-text !important;
+            width: 59px;
+            height: 59px !important;
+        }
+    }
+
+    &__radio {
+        display: none;
+    }
+}
+
+.button__buy {
+    margin: 43px 0 0;
+    padding: 23px 54px;
+    background-color: @color-text;
+    font-size: 1.89em;
+    color: @color-button-text;
+    border: none;
+    outline: none; /* убирать контур в Mozilla */
+}
+
+
+.wish-list {
+    display: flex;
+    margin: 40px 0 0 3px;
+
+    &__heart {
+        width: 26px;
+    }
+
+    &__item {
+        padding: 2px 0 0 7px;
+    }
+
+    &__link {
+        color: @color-button-like-text;
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: @color-background;
+    border-top: 1px solid @color-border;
+
+    &__servis {
+        display: flex;
+    }
+}
+
+.h-service {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 42px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.service {
+    display: flex;
+
+    &:first-child {
+        width: 52%;
+        padding-top: 58px;
+    }
+
+    &:last-child {
+        width: 38%;
+        margin-top: 7px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        &:first-child {
+            margin-left: 21px;
+        }
+
+        &:last-child {
+            margin-left: 73px;
+        }
+    }
+
+    &__list {
+        padding: 0;
+        margin-top: 13px;
+
+        &:last-child {
+            padding-left: 51px;
+            padding-top: 1px;
+        }
+
+        &_last-col {
+            padding-left: 101px !important;
+        }
+    }
+
+    &__item {
+        list-style-type: none;
+        margin-top: 8px;
+    }
+
+
+    &__link {
+        display: flex;
+        color: @color-text-list;
+        text-decoration: none;
+        font-size: .95em;
+        word-spacing: -2px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+}
+
+.bonus {
+    font-size: .95em;
+    margin-left: 17px;
+    padding-top: 60px;
+
+    &__list {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        list-style-type: none;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-start;
+        letter-spacing: -.6px;
+    }
+
+    &__delivery {
+        width: 45px;
+        margin: -3px 14px 27px 0;
+    }
+
+    &__heart {
+        width: 26px;
+        margin: -2px 12px 26px 19px;
+    }
+
+    &__cup {
+        width: 21px;
+        margin: 0 13px 26px 25px;
+    }
+}
+
+.references {
+    margin-left: 29%;
+    margin-top: 56px;
+
+    &__list {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+
+    &__facebook {
+        width: 15px;
+        margin: 0 0 19px 11px;
+    }
+
+    &__twitter {
+        width: 33px;
+        margin-left: 1px;
+        margin-bottom: 19px;
+    }
+
+    &__instagram {
+        width: 31px;
+        margin-left: 3px;
+    }
+}
+
+
+.line {
+    border: 0;
+    border-top: 1px solid @color-border;
+    transform: rotate(90);
+    width: 1400px;
+    margin: 0 0 0 101px;
+}
+
+.copyright {
+    width: 90%;
+    margin: 31px auto 110px;
+
+    &__text {
+        margin: 0;
+        font-size: .9em;
+        margin-left: 21px;
+        letter-spacing: -.2px;
+    }
+
+    :first-child {
+        margin-bottom: 8px;
+    }
+}
+
