@@ -15,10 +15,7 @@
 @color-button-like-text: #999;
 
 // Код для примера
-/*body {
-    background: #ccc;
-}
-
+/*
 .menu {
     margin: 0;
     padding: 0;
@@ -31,24 +28,6 @@
 
     @media @desktop {
         background: blue; // blue on large devices
-    }
-
-    &__item {
-        display: inline-block;
-        list-style-type: none;
-    }
-
-    &__link {
-        color: #FFF;
-    }
-
-    // Bottom Menu
-    &_bottom { // BEM modifier example
-        background: green;
-    }
-
-    &_bottom &__link {
-        color: #f00;
     }
 }
 */
@@ -74,32 +53,50 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 19px 0 15px;
+    padding: 18px 0 16px;
     background-color: white;
+}
 
-    &__name {
+.shop-logo {
+    padding-left: 1.6%;
+
+    &__text {
         font-weight: bold;
         font-size: 1.4em;
         color: @color-text;
-        padding-left: 1.6%;
         letter-spacing: 1px;
         word-spacing: 5px;
     }
+}
 
-    &__logo {
+.oggetto-logo {
+    padding-left: 7.4%;
+
+    &__pic {
         width: 49px;
-        padding-left: 7.5%;
         fill: @color-text;
     }
+}
 
-    &__phone {
+.phone {
+    margin-right: 2px;
+
+    &__text {
         font-weight: bold;
         font-size: 1.4em;
         color: @color-text;
         letter-spacing: 0.8px;
-        margin-right: 2px;
     }
+    /*
+&__phone {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: @color-text;
+    letter-spacing: 0.8px;
+    margin-right: 2px;
+}*/
 }
+
 
 .navigation {
     width: 100%;

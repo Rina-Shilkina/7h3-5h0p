@@ -2,10 +2,7 @@
 
 (function() {
 
-    var foo = 112;
-    var b = 2;
+    var message = 'Проект находится на этапе разработки. Могут возникать ошибки.';
 
-    foo += b;
-
-    alert (foo);
+    alert (message);
 })();
