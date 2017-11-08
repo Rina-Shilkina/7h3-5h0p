@@ -56,7 +56,7 @@
         </div>
 
         <div class="product">
-            <img class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка">
+            <img class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка" title="Белая футболка">
             <div class="product-info">
                 <div class="product-info__text">
                     <h2 class="product-info__title">Футболка Alien technology</h2>
@@ -83,7 +83,7 @@
                         <% color.forEach(function(item, index) { %>
 
                         <p class="color__item color__item_<%= item; %> <% if (index == 0) { %>color__item_active<% }%>">
-                            <input class="color__radio" name="color" type="radio" value="color__item_<%= item; %>" <% if (index == 0) { %>checked <% }%> >
+                            <input class="color__radio" name="color" type="radio" value="<%= item; %>" <% if (index == 0) { %>checked <% }%> >
                         </p>
                         <% }); %>
                     </div>
