@@ -104,7 +104,7 @@
                 <div class="service">
                     <div class="service__info">
                         <h4 class="service__title">Сервис и поддержка</h4>
-                        <div class="service__link">
+                        <div class="service__links">
                             <ul class="service__list">
                                 <% const service1 = ['Как сделать заказ', 'Возврат товара', 'Публичная оферта', 'Доставка']; %>
                                 <% service1.forEach(function(item, index) { %>
@@ -125,7 +125,7 @@
                     </div>
                     <div class="service__info">
                         <h4 class="service__title">О компании</h4>
-                        <div class="service__link">
+                        <div class="service__links">
                             <ul class="service__list">
                                 <% const service3 = ['О нас', 'Контакты', 'Вакансии', 'Партнерам']; %>
                                 <% service3.forEach(function(item, index) { %>
@@ -160,8 +160,8 @@
                             <% }); %>
                         </ul>
                     </div>
-                    <div class="footer__references references">
-                        <ul class="references__list">
+                    <div class="footer__social-links social-links">
+                        <ul class="social-links__list">
 
                             <% const references = [
                                 {img: 'facebook', alt: 'facebook'},
@@ -169,8 +169,8 @@
                                 {img: 'instagram', alt: 'instagram'}
                             ]%>
                             <% references.forEach(function(item, index) { %>
-                            <li class="references__item">
-                                <a href="#" class="references__link"><img class="references__<%= item.img %>" src="img/<%= item.img %>.svg" alt="<%= item.alt %>"></a>
+                            <li class="social-links__item">
+                                <a href="#" class="social-links__link"><img class="social-links__<%= item.img %>" src="img/<%= item.img %>.svg" alt="<%= item.alt %>"></a>
                             </li>
                             <% }); %>
                         </ul>
