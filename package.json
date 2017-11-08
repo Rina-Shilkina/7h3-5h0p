@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
+    "start": "set NODE_ENV=development&& gulp",
     "dev": "gulp",
     "prod": "gulp prod"
   },
@@ -23,6 +23,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-imagemin": "^3.4.0",
+    "gulp-include": "^2.3.1",
     "gulp-less": "^3.3.0",
     "gulp-sourcemaps": "^2.6.1",
     "install": "^0.10.1",
