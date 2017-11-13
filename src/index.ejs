@@ -12,11 +12,13 @@
 <div class="page">
 
     <div class = "header">
-        <span class="header__name">7h3 5h0p</span>
-        <div class="header__logo">
-            <img class="logo" src="img/oggetto_logo.svg" alt="Логотип">
-        </div>
-        <span class="header__phone">+7 (812) 2•12•85•06</span>
+
+        <div class="shop-logo"><span class="shop-logo__text">7h3 5h0p</span></div>
+        <div class="oggetto-logo"><img class="oggetto-logo__pic" src="img/oggetto_logo.svg" alt="Логотип"></div>
+        <div class="phone"><span class="phone__text">+7 (812) 2•12•85•06</span></div>
+        <!--=require img/oggetto_logo.svg-->
+        <!--
+        %-include(‘img/oggetto_logo.svg’)-%-->
     </div>
 
     <div class="navigation">
@@ -31,7 +33,9 @@
                     <% }); %>
                 </ul>
             </div>
-            <input class="navigation__search" name="search" placeholder="">
+            <form class="search" method="get" action="#">
+                <input class="navigation__search" name="search" placeholder="">
+            </form>
         </div>
     </div>
 
@@ -44,7 +48,7 @@
                     <% if (index % 2 == 0) { %>
                     <a href="#" class="breadcrumbs__link <% if(index == 4) { %>breadcrumbs__link_active<% } %>"><%= item; %></a>
                     <% } else {%>
-                    <span class="breadcrumbs__link_separator">/</span>
+                    <span class="breadcrumbs__separator">/</span>
                     <% } %>
                 </li>
                 <% }); %>
@@ -52,14 +56,14 @@
         </div>
 
         <div class="product">
-            <img class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка">
-            <div class="product__info">
-                <div class="product__text">
-                    <h2 class="product__title">Футболка Alien technology</h2>
-                    <p class="product__description">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</p>
-                    <div class="product__price">1500₽</div>
+            <img class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка" title="Белая футболка">
+            <div class="product-info">
+                <div class="product-info__text">
+                    <h2 class="product-info__title">Футболка Alien technology</h2>
+                    <p class="product-info__description">Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.</p>
+                    <div class="product-info__price">1500₽</div>
                 </div>
-                <div class="product__size size">
+                <div class="product-info__size size">
                     <div class="size__text">Размер:</div>
                     <div class="size__icon">
                         <% const size = ['S', 'M', 'L']; %>
@@ -71,7 +75,7 @@
                         <% }); %>
                     </div>
                 </div>
-                <div class="product__color color">
+                <div class="product-info__color color">
                     <div class="color__text">Цвет:</div>
 
                     <div class="color__icon">
@@ -79,7 +83,7 @@
                         <% color.forEach(function(item, index) { %>
 
                         <p class="color__item color__item_<%= item; %> <% if (index == 0) { %>color__item_active<% }%>">
-                            <input class="color__radio" name="color" type="radio" value="color__item_<%= item; %>" <% if (index == 0) { %>checked <% }%> >
+                            <input class="color__radio" name="color" type="radio" value="<%= item; %>" <% if (index == 0) { %>checked <% }%> >
                         </p>
                         <% }); %>
                     </div>
@@ -91,16 +95,16 @@
                         <div class="wish-list__item"><a href="#" class="wish-list__link">Отложить на потом</a></div>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
+    </div>
 
     <div class="footer">
-            <div class="footer__service h-service">
+            <div class="footer__service">
                 <div class="service">
                     <div class="service__info">
-                        <h4 class="service__text">Сервис и поддержка</h4>
-                        <div class="service__link">
+                        <h4 class="service__title">Сервис и поддержка</h4>
+                        <div class="service__links">
                             <ul class="service__list">
                                 <% const service1 = ['Как сделать заказ', 'Возврат товара', 'Публичная оферта', 'Доставка']; %>
                                 <% service1.forEach(function(item, index) { %>
@@ -120,8 +124,8 @@
                         </div>
                     </div>
                     <div class="service__info">
-                        <h4 class="service__text">О компании</h4>
-                        <div class="service__link">
+                        <h4 class="service__title">О компании</h4>
+                        <div class="service__links">
                             <ul class="service__list">
                                 <% const service3 = ['О нас', 'Контакты', 'Вакансии', 'Партнерам']; %>
                                 <% service3.forEach(function(item, index) { %>
@@ -156,8 +160,8 @@
                             <% }); %>
                         </ul>
                     </div>
-                    <div class="footer__references references">
-                        <ul class="references__list">
+                    <div class="footer__social-links social-links">
+                        <ul class="social-links__list">
 
                             <% const references = [
                                 {img: 'facebook', alt: 'facebook'},
@@ -165,8 +169,8 @@
                                 {img: 'instagram', alt: 'instagram'}
                             ]%>
                             <% references.forEach(function(item, index) { %>
-                            <li class="references__item">
-                                <a href="#" class="references__link"><img class="references__<%= item.img %>" src="img/<%= item.img %>.svg" alt="<%= item.alt %>"></a>
+                            <li class="social-links__item">
+                                <a href="#" class="social-links__link"><img class="social-links__<%= item.img %>" src="img/<%= item.img %>.svg" alt="<%= item.alt %>"></a>
                             </li>
                             <% }); %>
                         </ul>
