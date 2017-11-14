@@ -14,8 +14,10 @@
 @color-button-text: #fff;
 @color-button-like-text: #999;
 
-// Код для примера
 /*
+
+// Код для примера
+
 .menu {
     margin: 0;
     padding: 0;
@@ -54,11 +56,22 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 18px 0 16px;
-    background-color: white;
+
+    @media @phone-strict {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 0 10px;
+    }
 }
 
 .shop-logo {
     padding-left: 1.6%;
+
+    @media @phone-strict {
+        padding-bottom: 10px;
+        padding-left: 0;
+    }
 
     &__text {
         font-weight: bold;
@@ -66,37 +79,75 @@ body {
         color: @color-text;
         letter-spacing: 1px;
         word-spacing: 5px;
+        white-space: nowrap;
+
+        @media @phone-strict {
+            font-size: 1.2em;
+        }
     }
 }
 
 .oggetto-logo {
     padding-left: 7.4%;
 
+    @media @phone-strict {
+        padding-bottom: 10px;
+        padding-left: 0;
+    }
+
     &__pic {
         width: 49px;
         fill: @color-text;
+
+        @media @phone-strict {
+            width: 40px;
+        }
     }
 }
 
 .phone {
     margin-right: 2px;
 
+    @media @phone-strict {
+        padding-bottom: 10px;
+        padding-left: 0;
+    }
+
     &__text {
         font-weight: bold;
         font-size: 1.4em;
         color: @color-text;
-        letter-spacing: 0.8px;
+        letter-spacing: .8px;
+
+        @media @phone-strict {
+            font-size: 1em;
+            white-space: nowrap;
+        }
     }
-    /*
-&__phone {
-    font-weight: bold;
-    font-size: 1.4em;
-    color: @color-text;
-    letter-spacing: 0.8px;
-    margin-right: 2px;
-}*/
 }
 
+/*.phone {
+    @media @phone-strict {
+        padding-bottom: 10px;
+        padding-left: 0;
+    }
+    @media @tablet {
+        margin-right: 2px;
+    }
+
+    &__text {
+        @media @phone-strict {
+            font-size: 1em;
+            white-space: nowrap;
+        }
+        @media @tablet {
+            font-weight: bold;
+            font-size: 1.4em;
+            color: @color-text;
+            letter-spacing: .8px;
+        }
+    }
+}*/
 
 .navigation {
     width: 100%;
