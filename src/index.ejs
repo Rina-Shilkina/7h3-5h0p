@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>7h3_5h0p</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -23,15 +24,19 @@
 
     <div class="navigation">
         <div class="navigation__content">
-            <div class="navigation__link">
-                <ul class="navigation__list">
-                    <% const navigation = ['LISP', 'OCaml', 'JavaScript', 'Python', 'PHP']; %>
-                    <% navigation.forEach(function(item, index) { %>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link <% if(index == 0) { %>navigation__link_active<% } %>"><%= item; %></a>
-                    </li>
-                    <% }); %>
-                </ul>
+            <div class="navigation__hamburger hamburger">
+                <i class="hamburger__icon fa fa-bars" aria-hidden="true"></i>
+
+                <div class="navigation__link">
+                    <ul class="navigation__list">
+                        <% const navigation = ['LISP', 'OCaml', 'JavaScript', 'Python', 'PHP']; %>
+                        <% navigation.forEach(function(item, index) { %>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link <% if(index == 0) { %>navigation__link_active<% } %>"><%= item; %></a>
+                        </li>
+                        <% }); %>
+                    </ul>
+                </div>
             </div>
             <form class="search" method="get" action="#">
                 <input class="navigation__search" name="search" placeholder="">
