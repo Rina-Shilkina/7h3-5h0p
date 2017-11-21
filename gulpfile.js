@@ -6,7 +6,7 @@ const rename       = require('gulp-rename');
 const ejs          = require('gulp-ejs');
 const gutil        = require('gulp-util');
 const sourcemaps   = require('gulp-sourcemaps');
-const imagemin     = require('gulp-imagemin');
+//const imagemin     = require('gulp-imagemin');
 const env          = process.env.NODE_ENV;
 //const include      = require("gulp-include");
 
@@ -38,11 +38,11 @@ gulp.task('styles', () => {
 gulp.task('img', () => {
     if (env !== 'development') {
         gulp.src('src/img/**/*.*')
-            .pipe(imagemin({
-                progressive: true,
-                svgoPlugins: [{removeViewBox: false}],
-                interlaced: true
-            }))
+            //.pipe(imagemin({
+            //    progressive: true,
+            //   svgoPlugins: [{removeViewBox: false}],
+            //    interlaced: true
+            //}))
             .pipe(gulp.dest('./dist/img'));
     }
 });
