@@ -379,27 +379,85 @@ body {
     justify-content: space-between;
     margin-bottom: 123px;
 
+    &__content {
+        display: flex;
+
+        @media @phone-strict, @tablet-strict {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media @phone-strict {
+        flex-direction: column;
+    }
+
+    @media @tablet-strict {
+        flex-direction: column;
+    }
+
     &__pic {
         width: 49%;
         height: 100%;
         padding: 2px 0 0 22px;
+
+        @media @phone-strict {
+            width: 60%;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+        @media @tablet-strict {
+            width: 70%;
+            margin-bottom: 25px;
+            padding: 0;
+        }
     }
 }
 
 .product-info {
-    width: 45%;
+    padding-left: 64px;
+
+    @media @phone-strict, @tablet-strict {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0px;
+    }
+
+    &__content {
+        @media @phone-strict, @tablet-strict {
+            width: 70%;
+        }
+    }
+
+    &__text {
+        @media @phone-strict, @tablet-strict {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 
     &__title {
         margin: 0;
         font-size: 2.2em;
         font-weight: bold;
-        letter-spacing: 0.4px;
+        letter-spacing: .4px;
         line-height: 36px;
+
+        @media @phone-strict, @tablet-strict {
+            text-align: center;
+        }
     }
 
     &__description {
         margin: 14px 0 0 2px;
         word-spacing: 1px;
+
+        @media @phone-strict, @tablet-strict {
+            text-align: center;
+        }
     }
 
     &__price {
@@ -442,6 +500,24 @@ body {
 }
 
 .color {
+
+    @media @phone-strict, @tablet-strict {
+        display: none;
+    }
+
+    &__icon_show {
+        flex-direction: column;
+    }
+
+    &_show {
+        display: none;
+
+        @media @phone-strict, @tablet-strict {
+            display: block;
+            width: 20%;
+        }
+    }
+
     &__text {
         margin-top: 36px;
     }
