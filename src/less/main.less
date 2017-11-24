@@ -598,32 +598,67 @@ body {
         justify-content: space-between;
         margin: 0 auto;
         padding-bottom: 42px;
+
+        @media @phone-strict, @tablet-strict {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 15px;
+        }
     }
 }
 
 .service {
     display: flex;
 
-    &:first-child {
-        width: 54%;
-        padding-top: 58px;
+    @media @phone-strict {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
     }
 
-    &:last-child {
+    &:first-of-type {
+        width: 54%;
+        padding-top: 58px;
+
+        @media @phone-strict {
+            width: 90%;
+        }
+
+        @media @tablet-strict {
+            width: 90%;
+        }
+    }
+
+    &:last-of-type {
         width: 38%;
         margin-top: 7px;
+
+        @media @phone-strict {
+            width: 90%;
+        }
+
+        @media @tablet-strict {
+            width: 90%;
+        }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
 
-        &:first-child {
+        &:first-of-type {
             margin-left: 21px;
         }
 
-        &:last-child {
+        &:last-of-type {
             margin-left: 74px;
+
+            @media @phone-strict {
+                margin-left: -65px;
+                padding-top: 15px;
+            }
         }
     }
 
@@ -654,7 +689,7 @@ body {
         color: @color-text-list;
         text-decoration: none;
         font-size: .95em;
-        letter-spacing: -0.6px;
+        letter-spacing: -.6px;
     }
 
     &__title {
@@ -666,6 +701,15 @@ body {
     font-size: .95em;
     margin-left: 17px;
     padding-top: 60px;
+
+    @media @phone-strict {
+        margin-left: -13px;
+        padding-top: 15px;
+    }
+
+    @media @tablet-strict {
+        padding-top: 20px;
+    }
 
     &__list {
         padding: 0;
@@ -700,9 +744,36 @@ body {
     margin-left: 29%;
     margin-top: 56px;
 
+    @media @phone-strict {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 80%;
+    }
+
+    @media @tablet-strict {
+        width: 40%;
+        margin: 0;
+        padding: 45px 0 0 70px;
+    }
+
     &__list {
         padding: 0;
         margin: 0;
+
+        @media @phone-strict {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 15px;
+        }
+
+        @media @tablet-strict {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 15px;
+        }
     }
 
     &__item {
@@ -735,6 +806,12 @@ body {
     transform: rotate(90);
     width: 1400px;
     margin: 0 0 0 101px;
+
+    @media @phone-strict, @tablet-strict {
+        /*display: none;*/
+        width: 90%;
+        margin: 0;
+    }
 }
 
 .copyright {
