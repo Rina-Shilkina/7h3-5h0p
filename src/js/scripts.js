@@ -60,3 +60,5 @@ document.querySelector('.size').addEventListener('click', function (event) {
         event.target.classList.add('size__item_active');
     }
 });
+
+$('.oggetto-logo__pic svg path').removeAttr('style');

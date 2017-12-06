@@ -17,8 +17,13 @@
     <div class = "header">
 
         <div class="shop-logo"><span class="shop-logo__text">7h3 5h0p</span></div>
-        <div class="oggetto-logo"><img class="oggetto-logo__pic" src="img/oggetto_logo.svg" alt="Логотип"></div>
-        <div class="phone"><span class="phone__text">+7 (812) 2•12•85•06</span></div>
+        <!-- <div class="oggetto-logo"><img class="oggetto-logo__pic" src="img/oggetto_logo.svg" alt="Логотип"></div>-->
+
+        <div class="oggetto-logo oggetto-logo__pic"><%-include('img/oggetto_logo.svg')%></div>
+
+           <!-- <img class="oggetto-logo__pic" src="img/oggetto_logo.svg" alt="Логотип"></div> -->
+
+        <a class="phone phone__text" href="tel:+78122128506">+7 (812) 2•12•85•06</a>
         <!--=require img/oggetto_logo.svg-->
         <!--
         %-include(‘img/oggetto_logo.svg’)-%-->
