@@ -62,3 +62,4 @@ document.querySelector('.size').addEventListener('click', function (event) {
 });
 
 $('.oggetto-logo__pic svg path').removeAttr('style');
+$('.oggetto-logo__pic svg path').removeAttr('fill');
