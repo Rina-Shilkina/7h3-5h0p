@@ -171,6 +171,73 @@ body {
         align-items: center;
     }
 
+    &__search {
+        height: 34px;
+        width: 276px;
+        margin-right: 3px;
+        padding-left: 5px;
+        background: white url(../img/search.png) no-repeat 97%;
+        border: 1px solid @color-border;
+
+        @media @phone-strict {
+            height: 25px;
+            width: 180px;
+        }
+
+        @media @tablet-strict {
+            height: 28px;
+            width: 200px;
+        }
+
+        @media @large {
+            width: 241px;
+            padding-right: 30px;
+        }
+    }
+}
+
+.navigation__search:focus {
+    outline: 2px solid @color-text; /* Рамка при получении фокуса */
+}
+
+.menu {
+    &__icon-bars {
+        color: @color-text;
+        font-size: 1.4em;
+        padding-left: 24px;
+
+        @media @phone-strict {
+            font-size: 1.2em;
+        }
+
+        @media @tablet-strict {
+            font-size: 1.3em;
+        }
+
+        @media @desktop {
+            display: none;
+        }
+    }
+
+    &__icon-times {
+        display: none;
+        color: @color-text;
+        font-size: 1.4em;
+        padding-left: 24px;
+
+        @media @phone-strict {
+            font-size: 1.2em;
+        }
+
+        @media @tablet-strict {
+            font-size: 1.3em;
+        }
+
+        @media @desktop {
+            display: none;
+        }
+    }
+
     &__list {
         display: flex;
         padding: 5px 0 0 24px;
@@ -254,73 +321,6 @@ body {
             text-decoration: none;
         }
     }
-
-    &__search {
-        height: 34px;
-        width: 276px;
-        margin-right: 3px;
-        padding-left: 5px;
-        background: white url(../img/search.png) no-repeat 97%;
-        border: 1px solid @color-border;
-
-        @media @phone-strict {
-            height: 25px;
-            width: 180px;
-        }
-
-        @media @tablet-strict {
-            height: 28px;
-            width: 200px;
-        }
-
-        @media @large {
-            width: 241px;
-            padding-right: 30px;
-        }
-    }
-}
-
-.navigation__search:focus {
-    outline: 2px solid @color-text; /* Рамка при получении фокуса */
-}
-
-.hamburger {
-    &__icon-bars {
-        color: @color-text;
-        font-size: 1.4em;
-        padding-left: 24px;
-
-        @media @phone-strict {
-            font-size: 1.2em;
-        }
-
-        @media @tablet-strict {
-            font-size: 1.3em;
-        }
-
-        @media @desktop {
-            display: none;
-        }
-    }
-
-    &__icon-times {
-        display: none;
-        color: @color-text;
-        font-size: 1.4em;
-        padding-left: 24px;
-
-        @media @phone-strict {
-            font-size: 1.2em;
-        }
-
-        @media @tablet-strict {
-            font-size: 1.3em;
-        }
-
-        @media @desktop {
-            display: none;
-        }
-    }
 }
 
 .navigation.navigation__active .navigation__content {
@@ -343,21 +343,21 @@ body {
     }
 }
 
-.navigation.navigation__active .hamburger {
+.navigation.navigation__active .menu {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.navigation.navigation__active .hamburger__icon-bars {
+.navigation.navigation__active .menu__icon-bars {
     display: none;
 }
 
-.navigation.navigation__active .hamburger__icon-times {
+.navigation.navigation__active .menu__icon-times {
     display: block;
 }
 
-.navigation.navigation__active .navigation__links {
+.navigation.navigation__active .menu__links {
     @media @phone-strict {
         display: block;
     }
@@ -392,6 +392,14 @@ body {
     &__link {
         font-size: 1em;
         color: @color-text;
+
+        @media @phone-strict {
+            font-size: .8em;
+        }
+
+        @media @tablet-strict {
+            font-size: .9em;
+        }
 
         &_active {
             color: @color-text-list;

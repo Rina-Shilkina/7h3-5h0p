@@ -35,21 +35,21 @@ $(document).on('click', '.color .color__item', function () {
     $(this).find('input').prop('checked', true);
 });
 
-$('.hamburger__icon-bars').click(function () {
+$('.menu__icon-bars').click(function () {
     $('.navigation').addClass('navigation__active');
     $('.background').show();
 });
 
-$('.hamburger__icon-times').click(function () {
+$('.menu__icon-times').click(function () {
     $('.navigation').removeClass('navigation__active');
     $('.background').hide();
 
 });
 
-document.querySelector('.navigation__links').addEventListener('click', function (event) {
-    if (event.target.classList.contains('navigation__link')) {
-        document.querySelector('.navigation__link.navigation__link_active').classList.remove('navigation__link_active');
-        event.target.classList.add('navigation__link_active');
+document.querySelector('.menu__links').addEventListener('click', function (event) {
+    if (event.target.classList.contains('menu__link')) {
+        document.querySelector('.menu__link.menu__link_active').classList.remove('menu__link_active');
+        event.target.classList.add('menu__link_active');
     }
 });
 
