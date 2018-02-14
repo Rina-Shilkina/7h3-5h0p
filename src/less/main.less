@@ -430,22 +430,35 @@ body {
         flex-direction: column;
     }
 
-    &__pic {
-        width: 49%;
+    &__pics {
+        width: 53%;
         height: 100%;
         padding: 2px 0 0 22px;
 
-        @media @phone-strict {
-            width: 60%;
-            margin-bottom: 20px;
+        @media @desktop-strict {
+            max-width: 70%;
+            min-width: 450px;
+            margin-bottom: 25px;
             padding: 0;
         }
 
         @media @tablet-strict {
-            width: 70%;
-            margin-bottom: 25px;
+            max-width: 60%;
+            min-width: 400px;
+            margin-bottom: 20px;
             padding: 0;
         }
+
+        @media @phone-strict {
+            min-width: 280px;
+            max-width: 50%;
+            margin-bottom: 15px;
+            padding: 0;
+        }
+    }
+
+    &__pic {
+        width: 100%;
     }
 }
 
@@ -483,6 +496,21 @@ body {
         @media @phone-strict, @tablet-strict {
             text-align: center;
         }
+
+        @media @desktop-strict {
+            font-size: 1.9em;
+            white-space: nowrap;
+        }
+
+        @media @tablet-strict {
+            font-size: 1.7em;
+            white-space: nowrap;
+        }
+
+        @media @phone-strict {
+            font-size: 1.4em;
+            white-space: nowrap;
+        }
     }
 
     &__description {
@@ -492,6 +520,18 @@ body {
         @media @phone-strict, @tablet-strict {
             text-align: center;
         }
+
+        @media @desktop-strict {
+            font-size: .9em;
+        }
+
+        @media @tablet-strict {
+            font-size: .9em;
+        }
+
+        @media @phone-strict {
+            font-size: .8em;
+        }
     }
 
     &__price {
@@ -500,6 +540,21 @@ body {
         font-size: 2.4em;
         font-weight: bold;
         letter-spacing: -1px;
+
+        @media @desktop-strict {
+            font-size: 2.1em;
+            margin: 18px 0 20px -4px;
+        }
+
+        @media @tablet-strict {
+            font-size: 1.9em;
+            margin: 15px 0 17px -4px;
+        }
+
+        @media @phone-strict {
+            font-size: 1.7em;
+            margin: 12px 0 14px -4px;
+        }
     }
 }
 
