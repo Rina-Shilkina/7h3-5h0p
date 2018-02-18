@@ -449,7 +449,7 @@ body {
         }
 
         @media @phone-strict {
-            min-width: 280px;
+            min-width: 230px;
             max-width: 50%;
             margin-bottom: 15px;
             padding: 0;
@@ -465,10 +465,12 @@ body {
 
         @media @tablet-strict {
             display: flex;
+            justify-content: space-around;
         }
 
         @media @phone-strict {
             display: flex;
+            justify-content: space-around;
         }
     }
 }
@@ -663,9 +665,14 @@ body {
     &_show {
         display: none;
 
-        @media @phone-strict, @tablet-strict {
+        @media @tablet-strict {
             display: block;
             margin-left: 40px;
+        }
+
+        @media @phone-strict {
+            display: block;
+            margin-left: 20px;
         }
     }
 
@@ -723,8 +730,8 @@ body {
         }
 
         @media @phone-strict {
-            width: 51px;
-            height: 51px;
+            width: 45px;
+            height: 45px;
             margin: 0 0 10px 0;
         }
 
@@ -738,12 +745,12 @@ body {
 
             @media @tablet-strict {
                 width: 51px;
-                heighth: 51px;
+                height: 51px;
             }
 
             @media @phone-strict {
-                width: 47px;
-                heighth: 47px;
+                width: 42px;
+                height: 42px;
             }
         }
     }
