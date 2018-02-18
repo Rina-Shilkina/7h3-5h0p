@@ -431,7 +431,6 @@ body {
     }
 
     &__pics {
-        width: 53%;
         height: 100%;
         padding: 2px 0 0 22px;
 
@@ -459,6 +458,18 @@ body {
 
     &__pic {
         width: 100%;
+    }
+
+    &__colors {
+        width: 54.7%;
+
+        @media @tablet-strict {
+            display: flex;
+        }
+
+        @media @phone-strict {
+            display: flex;
+        }
     }
 }
 
@@ -559,6 +570,20 @@ body {
 }
 
 .product-size {
+    &__text {
+        @media @desktop-strict {
+            font-size: .9em;
+        }
+
+        @media @tablet-strict {
+            font-size: .9em;
+        }
+
+        @media @phone-strict {
+            font-size: .8em;
+        }
+    }
+
     &__icon {
         display: flex;
         margin: 13px 0 0 2px;
@@ -573,9 +598,50 @@ body {
         text-align: center;
         margin: 0 10px 0 0;
 
+        @media @desktop-strict {
+            font-size: 2.15em;
+            width: 59px;
+            height: 59px;
+            line-height: 59px;
+        }
+
+        @media @tablet-strict {
+            font-size: 1.95em;
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+        }
+
+        @media @phone-strict {
+            font-size: 1.75em;
+            width: 51px;
+            height: 51px;
+            line-height: 51px;
+        }
+
         &_active {
             border: 3px solid @color-text !important;
             width: 59px;
+            height: 59px;
+            line-height: 59px;
+
+            @media @desktop-strict {
+                width: 56px;
+                height: 56px;
+                line-height: 56px;
+            }
+
+            @media @tablet-strict {
+                width: 51px;
+                height: 51px;
+                line-height: 51px;
+            }
+
+            @media @phone-strict {
+                width: 47px;
+                height: 47px;
+                line-height: 47px;
+            }
         }
     }
 
@@ -599,12 +665,25 @@ body {
 
         @media @phone-strict, @tablet-strict {
             display: block;
-            width: 20%;
+            margin-left: 40px;
         }
     }
 
     &__text {
         margin-top: 36px;
+        @media @desktop-strict {
+            font-size: .9em;
+        }
+
+        @media @tablet-strict {
+            font-size: .9em;
+            margin-top: 0px;
+        }
+
+        @media @phone-strict {
+            font-size: .8em;
+            margin-top: 0px;
+        }
     }
 
     &__icon {
@@ -632,10 +711,40 @@ body {
             background-color: @color-tshirt-green;
         }
 
+        @media @desktop-strict {
+            width: 59px;
+            height: 59px;
+        }
+
+        @media @tablet-strict {
+            width: 55px;
+            height: 55px;
+            margin: 0 0 10px 0;
+        }
+
+        @media @phone-strict {
+            width: 51px;
+            height: 51px;
+            margin: 0 0 10px 0;
+        }
+
         &_active {
             border: 3px solid @color-text !important;
-            width: 59px;
-            height: 59px !important;
+
+            @media @desktop-strict {
+                width: 55px;
+                height: 55px;
+            }
+
+            @media @tablet-strict {
+                width: 51px;
+                heighth: 51px;
+            }
+
+            @media @phone-strict {
+                width: 47px;
+                heighth: 47px;
+            }
         }
     }
 

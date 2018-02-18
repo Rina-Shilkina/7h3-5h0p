@@ -72,8 +72,23 @@
         <div class="product">
 
         <div class="product__content">
-            <div class="product__pics">
-                <img class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка" title="Белая футболка">
+            <div class="product__colors">
+                <div class="product__pics">
+                    <img class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка" title="Белая футболка">
+                </div>
+                <div class="product-color product-color_show">
+                    <div class="product-color__text">Цвет:</div>
+
+                    <div class="product-color__icon product-color__icon_show">
+                        <% const color = ['white', 'yellow', 'green']; %>
+                        <% color.forEach(function(item, index) { %>
+
+                        <p class="product-color__item product-color__item_<%= item; %> <% if (index == 0) { %>product-color__item_active<% }%>">
+                            <input class="product-color__radio" name="product-color" type="radio" value="<%= item; %>" <% if (index == 0) { %>checked <% }%> >
+                        </p>
+                        <% }); %>
+                    </div>
+                </div>
             </div>
 
             <div class="product-info">
@@ -100,9 +115,8 @@
                     <div class="product-color__text">Цвет:</div>
 
                     <div class="product-color__icon">
-                        <% const color = ['white', 'yellow', 'green']; %>
-                        <% color.forEach(function(item, index) { %>
 
+                        <% color.forEach(function(item, index) { %>
                         <p class="product-color__item product-color__item_<%= item; %> <% if (index == 0) { %>product-color__item_active<% }%>">
                             <input class="product-color__radio" name="product-color" type="radio" value="<%= item; %>" <% if (index == 0) { %>checked <% }%> >
                         </p>
@@ -119,18 +133,7 @@
                 </div>
             </div>
         </div>
-            <div class="product-color product-color_show">
-                <div class="product-color__text">Цвет:</div>
 
-                <div class="product-color__icon product-color__icon_show">
-                    <% color.forEach(function(item, index) { %>
-
-                    <p class="product-color__item product-color__item_<%= item; %> <% if (index == 0) { %>color__item_active<% }%>">
-                        <input class="product-color__radio" name="product-color" type="radio" value="<%= item; %>" <% if (index == 0) { %>checked <% }%> >
-                    </p>
-                    <% }); %>
-                </div>
-            </div>
 
         </div>
     </div>
